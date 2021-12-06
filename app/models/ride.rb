@@ -17,4 +17,17 @@ class Ride < ActiveRecord::Base
 
     
   end
+
+  def meets_requirements
+    
+  end
+
+  def not_enough_tickets
+    "You do not have enough tickets to ride the #{self.attraction.name}."
+  end
+
+  def not_tall_enough
+    "You are not tall enough to ride the #{self.attraction.name}."
+  end
+
 end
